@@ -25,6 +25,8 @@ A python utility for taking backups and with the option to upload to Google Driv
 
 - "gd_sk_path" = "Path of Creddentails.json, which was obtained from the authentication process"
 
+- "timeout" = "Request timeout in mins" i.e "default is 10"
+
 
 ### Authentication for Google Drive
 please follow the steps in following document:[Authentication Guide](https://1drv.ms/b/s!Aumu-6oUf5yPkxJgMYXNqfdkitQw?e=9462B2) 

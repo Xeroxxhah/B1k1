@@ -5,15 +5,19 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 from pathlib import Path
+import socket
+import speedtest
 
 
 class GoogleDrive:
 
-    def __init__(self,credentials, secrects_file='token.json'):
+    def __init__(self,credentials,timeout,secrects_file='token.json'):
         self.SCOPES = ['https://www.googleapis.com/auth/drive']
         self.creds = None
         self.secrects_file = secrects_file
         self.credentials_file = credentials
+        socket.setdefaulttimeout(60*int(timeout))
+        
     
     def authHandler(self):
         creds_file = Path('token.json')
@@ -59,3 +63,5 @@ class GoogleDrive:
             upload_file = service.files().create(body=file_metadata,media_body=media,fields="id").execute()
         except HttpError as err:
             print(f'Error: {str(err)}')
+        except TimeoutError:
+            print('Timeout, please set an appropriate value for timeout in config.json.')

@@ -2,16 +2,27 @@ from core.filehandler import File, Handler
 from core.misc import Misc
 from core.threadmanager import ThreadManager
 from core.cloudhelper import GoogleDrive
+from core.version import Version
 from pathlib import Path
 import datetime
 
 
-config = Misc
+config = Misc()
 config.LoadConfig()
 root_paths = config.paths
 backup_path = config.backup_path
 gd_sk_path = config.gd_sk_path
+timeout = config.timeout
 
+
+version = Version()
+print('*'*20)
+print(f'Current version: {version.currentVersion}')
+if not version.IsUpdated():
+    if version.updatedVersion is None:
+        pass
+    else:
+        print(f'Update available: {version.updatedVersion}')
 print('*'*20)
 print(f'Start time: {datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")}')
 print('*'*20)
@@ -52,7 +63,7 @@ def main():
     try:
         z = input('Enter file name:')
         z = path.joinpath(z)
-        google_drive = GoogleDrive(gd_sk_path)
+        google_drive = GoogleDrive(gd_sk_path,timeout)
         google_drive.authHandler()
         google_drive.uploadFile(z)
     except KeyboardInterrupt:

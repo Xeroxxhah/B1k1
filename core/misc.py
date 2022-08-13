@@ -13,7 +13,8 @@ class Misc:
     
     backup_path = ''
     paths = ''
-    
+    gd_sk_path = ''
+    timeout = ''
     
     def LoadConfig():
         with open(Misc.config_path, 'r') as config:
@@ -36,8 +37,10 @@ class Misc:
                 Misc.backup_path = config_settings.get('backup_path')
                 Misc.paths = config_settings.get('paths')
                 Misc.gd_sk_path = config_settings.get('gd_sk_path')
+                Misc.timeout = config_settings.get('timeout')
             else:
                 Misc.backup_path = ''
+                Misc.timeout = ''
                 Misc.paths = ''
                 Misc.gd_sk_path = ''
                 print('Please provide valid paths...')
