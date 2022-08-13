@@ -5,7 +5,7 @@
 ![Contribution](https://img.shields.io/badge/Contributions-Welcome-<brightgreen>)
 [![Active](http://img.shields.io/badge/Status-Active-green.svg)](https://github.com/Xeroxxhah)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-![semver](https://badgen.net/badge/Semantic-Version/0.1.1/purple)
+[![releases](https://img.shields.io/github/release/Xeroxxhah/B1k1.svg)](https://github.com/Xeroxxhah/B1k1/releases)
 
 A python utility for taking backups and with the option to upload to Google Drive.
 
