@@ -7,7 +7,7 @@ from pathlib import Path
 import datetime
 
 
-config = Misc()
+config = Misc
 config.LoadConfig()
 root_paths = config.paths
 backup_path = config.backup_path

@@ -16,6 +16,7 @@ class Misc:
     gd_sk_path = ''
     timeout = ''
     
+    
     def LoadConfig():
         with open(Misc.config_path, 'r') as config:
             config_content = config.read()
