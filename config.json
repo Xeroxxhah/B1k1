@@ -1,7 +1,7 @@
 {
-    "paths" : ["C:\\Users\\s0ulr3ap3r\\Desktop\\dir1"],
+    "paths" : ["C:\\Users\\<user>\\Desktop\\"],
 
-    "backup_path": "C:\\Users\\s0ulr3ap3r",
+    "backup_path": "C:\\Users\\<user>",
 
     "gd_sk_path":"Credentials.json"
     
