@@ -16,7 +16,7 @@ A python utility for taking backups and with the option to upload to Google Driv
 - 2nd: ```cd B1k1```
 - 3rd: ```pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib```
 - 4th: ```Configure config.json```
-- 5th  ```python3 main.py```
+- 5th  ```python3 b1k1.py```
 
 ### Configuring config.json
 - "paths" = "Pths which you want to take backup of" i.e "/home/username/"
