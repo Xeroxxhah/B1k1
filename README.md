@@ -36,7 +36,7 @@ Found any bug!
 Report it to me at xeroxxhah@pm.me
 or open an [issue](https://github.com/Xeroxxhah/B1k1/issues)
 
-### Updates:
+### TODO:
 schedule jobs for linux and windows.
 
 ### Contributions:
