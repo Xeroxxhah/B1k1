@@ -56,7 +56,7 @@ def main():
         google_drive.authHandler()
         google_drive.uploadFile(z)
     except KeyboardInterrupt:
-        print('Bye...')
+        print('\nBye...')
         quit()
 
 
