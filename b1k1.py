@@ -47,9 +47,12 @@ thread_manager.CalculateThreads(len(root_paths))
 path_iter = thread_manager.Slice(root_paths, thread_manager.calculated_threads)
 thread_list = thread_manager.ThreadFactory(path_iter,backup_path,driver)
 
+
 print('*'*20)
 print(f'Total Threads: {thread_manager.calculated_threads}')
 print('*'*20)
+
+
 
 def main():
     for thread in thread_list:
