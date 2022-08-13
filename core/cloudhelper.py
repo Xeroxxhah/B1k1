@@ -9,10 +9,11 @@ from pathlib import Path
 
 class GoogleDrive:
 
-    def __init__(self, secrects_file='token.json'):
+    def __init__(self,credentials, secrects_file='token.json'):
         self.SCOPES = ['https://www.googleapis.com/auth/drive']
         self.creds = None
         self.secrects_file = secrects_file
+        self.credentials_file = credentials
     
     def authHandler(self):
         creds_file = Path('token.json')
@@ -23,7 +24,7 @@ class GoogleDrive:
                 self.creds.refresh(Request())
             else:
                 flow = InstalledAppFlow.from_client_secrets_file(
-                    'Credentials.json',
+                    self.credentials_file,
                     self.SCOPES)
                 self.creds = flow.run_local_server(port=0)
         with open('token.json', 'w') as token:

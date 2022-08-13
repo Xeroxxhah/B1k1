@@ -10,7 +10,7 @@ config = Misc
 config.LoadConfig()
 root_paths = config.paths
 backup_path = config.backup_path
-
+gd_sk_path = config.gd_sk_path
 
 print('*'*20)
 print(f'Start time: {datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")}')
@@ -52,7 +52,7 @@ def main():
     try:
         z = input('Enter file name:')
         z = path.joinpath(z)
-        google_drive = GoogleDrive()
+        google_drive = GoogleDrive(gd_sk_path)
         google_drive.authHandler()
         google_drive.uploadFile(z)
     except KeyboardInterrupt:

@@ -31,13 +31,17 @@ class Misc:
                         quit()
             temp_backup_path = Path(config_settings.get('backup_path'))
             temp_paths = Path(config_settings.get('paths')[0])
-            if temp_backup_path.exists() and temp_paths.exists():            
+            temp_gd_sk_path = Path(config_settings.get('gd_sk_path'))
+            if temp_backup_path.exists() and temp_paths.exists() and temp_gd_sk_path.exists():            
                 Misc.backup_path = config_settings.get('backup_path')
                 Misc.paths = config_settings.get('paths')
+                Misc.gd_sk_path = config_settings.get('gd_sk_path')
             else:
                 Misc.backup_path = ''
                 Misc.paths = ''
+                Misc.gd_sk_path = ''
                 print('Please provide valid paths...')
+                quit()
 
 
                     
