@@ -19,8 +19,12 @@ A python utility for taking backups and with the option to upload to Google Driv
 - 5th  ```python3 main.py```
 
 ### Configuring config.json
-"paths" = "Pths which you want to take backup of" i.e "/home/username/"
-"backup_path" = "path where you want to store backup" i.e "/home/username/"
+- "paths" = "Pths which you want to take backup of" i.e "/home/username/"
+
+- "backup_path" = "path where you want to store backup" i.e "/home/username/"
+
+- "gd_sk_path" = "Path of Creddentails.json, which was obtained from the authentication process"
+
 
 ### Authentication for Google Drive
 please follow the steps in following document:[Authentication Guide](https://1drv.ms/b/s!Aumu-6oUf5yPkxJgMYXNqfdkitQw?e=9462B2) 
