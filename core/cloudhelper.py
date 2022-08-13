@@ -6,7 +6,6 @@ from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 from pathlib import Path
 import socket
-import speedtest
 
 
 class GoogleDrive:
